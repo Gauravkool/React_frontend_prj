@@ -1,0 +1,15 @@
+input {
+  display: block;
+  padding: 1em;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+.form-horizontal {
+  padding: 20px;
+}
+.control-label {
+  margin-bottom: 5px;
+}

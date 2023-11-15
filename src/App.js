@@ -1,28 +1,21 @@
-import { useState } from 'react';
-import './App.css';
-import AddVideo from './components/AddVideo';
-import videoDB from './data/data';
-import VideoList from './components/VideoList';
+import "./App.css";
+import AddProduct from "./AddProduct";
+import ProductList from "./ProductList";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <ProductList></ProductList>,
+  },
+  {
+    path: "/add",
+    element: <AddProduct></AddProduct>,
+  },
+]);
+
 function App() {
-  console.log('render App')
-
-  const [videos,setVideos] = useState(videoDB);
-
-  function addVideos(video){
-      setVideos([
-            ...videos,
-            {...video, id: videos.length+1}
-          ]);
-  }
-
-  return (
-    <div className="App" onClick={()=>console.log('App')}>
-       <AddVideo addVideos={addVideos}></AddVideo>
-       <VideoList videos={videos}></VideoList>
-
-
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -1,0 +1,24 @@
+/* .discount {
+  background-color: red;
+  padding: 4px;
+  border-radius: .5em;
+  color: white;
+  position: absolute;
+  top: 3.5em;
+  left: 5em;
+} */
+.container {
+  background-color: white;
+}
+.wishlist:hover {
+  color: red;
+}
+
+.new-price {
+  color: orangered;
+  font-weight: 700;
+}
+.buy {
+  color: rgb(104, 29, 29);
+  font-weight: bold;
+}
