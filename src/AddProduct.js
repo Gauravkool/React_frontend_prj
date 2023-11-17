@@ -16,7 +16,7 @@ function AddProduct() {
   }
 
   const addProduct = async (product) => {
-    const res = await axios.post("http://localhost:8080/products", product);
+    const res = await axios.post("/products", product);
     console.log("data", res.data);
     // setProduct(product);
   };

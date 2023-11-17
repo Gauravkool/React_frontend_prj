@@ -6,12 +6,12 @@ function ProductList() {
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
-    const res = await axios.get("http://localhost:8080/products");
+    const res = await axios.get("/products");
     console.log("data", res.data);
     setProducts(res.data);
   };
   const handleDelete = async (id) => {
-    const res = await axios.delete(`http://localhost:8080/products/${id}`);
+    const res = await axios.delete(`/products/${id}`);
     console.log("data", res.data);
     if (res.data._id) {
       setProducts(products.filter((p) => p._id !== res.data._id));
